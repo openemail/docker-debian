@@ -14,7 +14,7 @@ Dockerfile to build an [debian](https://www.debian.org/) container image.
 
 - [Dave Conroy](dave at tiredofit dot ca) [https://github.com/tiredofit]
 
-* Authors
+# Authors
 
 - [Chinthaka Deshapriya](https://www.linkedin.com/in/chinthakadeshapriya/) 
 
