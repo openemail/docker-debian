@@ -1,5 +1,5 @@
 FROM debian:stretch
-LABEL maintainer="Dave Conroy (dave at tiredofit dot ca)"
+LABEL maintainer="Chinthaka Deshapriya (chinthaka@cybergate.lk)"
 
 ### Set Defaults
   ENV DEBUG_MODE=FALSE \
