@@ -157,7 +157,7 @@ docker exec -it (whatever your container name is e.g. debian) bash
 ```
 # Original Authors
 
-- [Dave Conroy](dave at tiredofit dot ca)(https://github.com/tiredofit)
+- [Dave Conroy](https://github.com/tiredofit) (dave at tiredofit dot ca)
 
 # References
 
