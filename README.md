@@ -1,5 +1,3 @@
-# hub.docker.com/openemail/debian
-
 # Introduction
 
 Dockerfile to build an [debian](https://www.debian.org/) container image.
@@ -10,13 +8,14 @@ Dockerfile to build an [debian](https://www.debian.org/) container image.
 * Cron installed along with other tools (curl, less, logrotate, nano, vim) for easier management.
 * Ability to update User ID and Group ID Permissions for Development Purposes dyanmically.
 
-# Original Authors
-
-- [Dave Conroy](dave at tiredofit dot ca) [https://github.com/tiredofit]
-
 # Authors
 
 - [Chinthaka Deshapriya](https://www.linkedin.com/in/chinthakadeshapriya/) 
+
+# Contributors
+
+- [Amila Kothalawala](https://www.linkedin.com/in/amila-m-kothalawala/)
+
 
 # Table of Contents
 
@@ -38,20 +37,16 @@ No prequisites required
 
 # Installation
 
-Automated builds of the image are available on [Docker Hub](https://hub.docker.com/tiredofit/debian) and 
+Automated builds of the image are available on [Docker Hub](https://hub.docker.com/r/openemail/debian) and 
 is the recommended method of installation.
 
-
 ```bash
-docker pull tiredofit/debian:(imagetag)
+docker pull openemail/debian:latest
 ```
 
 The following image tags are available:
 
 * `latest` - Debian Stretch - 9
-* `stretch:latest` - Debian Stretch - 9
-* `jessie:latest` - Debian Jessie - 8
-
 
 # Quick Start
 
@@ -82,7 +77,7 @@ Below is the complete list of available options that can be used to customize yo
 | `ENABLE_CRON`     | Enable Cron - Default: `TRUE`                                   |
 | `ENABLE_SMTP`     | Enable SMTP services - Default: `TRUE`						|
 | `ENABLE_ZABBIX`   | Enable Zabbix Agent - Default: `TRUE`                           |
-| `TIMEZONE`        | Set Timezone - Default: `America/Vancouver`                     |
+| `TIMEZONE`        | Set Timezone - Default: `Asia/Colombo`                     |
 
 If you wish to have this send mail, set `ENABLE_SMTP=TRUE` and configure the following environment variables. See the [MSMTP Configuration Options](http://msmtp.sourceforge.net/doc/msmtp.html) for further information on options to configure MSMTP
 
@@ -92,10 +87,10 @@ If you wish to have this send mail, set `ENABLE_SMTP=TRUE` and configure the fol
 | `SMTP_HOST`      | Hostname of SMTP Server - Default: `postfix-relay`                            |
 | `SMTP_PORT`      | Port of SMTP Server - Default: `25`                            |
 | `SMTP_DOMAIN`     | HELO Domain - Default: `docker`                                   |
-| `SMTP_MAILDOMAIN`     | Mail Domain From - Default: `example.org`						|
+| `SMTP_MAILDOMAIN`     | Mail Domain From - Default: `openemail.io`						|
 | `SMTP_AUTHENTICATION`     | SMTP Authentication - Default: `none`                                   |
 | `SMTP_USER`     | Enable SMTP services - Default: `user`						|
-| `SMTP_PASS`   | Enable Zabbix Agent - Default: `password`                           |
+| `SMTP_PASS`   | Enable SMTP password - Default: `password`                           |
 | `SMTP_TLS`        | Use TLS - Default: `off`                     |
 | `SMTP_STARTTLS`   | Start TLS from within Dession - Default: `off` |
 | `SMTP_TLSCERTCHECK` | Check remote certificate - Default: `off` |
@@ -113,7 +108,7 @@ See The [Official Zabbix Agent Documentation](https://www.zabbix.com/documentati
 | `ZABBIX_LISTEN_PORT` | Zabbix Agent Listening Port - Default: `10050` |
 | `ZABBIX_LISTEN_IP` | Zabbix Agent Listening IP - Default: `0.0.0.0` |
 | `ZABBIX_START_AGENTS` | How many Zabbix Agents to Start - Default: `3 | 
-| `ZABBIX_SERVER_ACTIVE` | Server for Active Checks - Default: `zabbix-proxy` |
+| `ZABBIX_SERVER_ACTIVE` | Server for Active Checks - Default: `zabbix-openemail` |
 | `ZABBIX_HOSTNAME` | Container hostname to report to server - Default: `docker` |
 | `ZABBIX_REFRESH_ACTIVE_CHECKS` | Seconds to refresh Active Checks - Default: `120` |
 | `ZABBIX_BUFFER_SEND` | Buffer Send - Default: `5` |
@@ -160,6 +155,9 @@ For debugging and maintenance purposes you may want access the containers shell.
 ```bash
 docker exec -it (whatever your container name is e.g. debian) bash
 ```
+# Original Authors
+
+- [Dave Conroy](dave at tiredofit dot ca) [https://github.com/tiredofit]
 
 # References
 
